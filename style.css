@@ -4,3 +4,8 @@ body {
                 */
     font: 100%/1.5 system-ui;
 }
+.profile-photo {
+    /* Resize profile photo
+    */
+    width: 200px;
+}
