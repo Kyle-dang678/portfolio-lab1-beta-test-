@@ -7,5 +7,8 @@ body {
 .profile-photo {
     /* Resize profile photo
     */
-    width: 200px;
+    display: block;
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto;
 }
