@@ -48,4 +48,36 @@ nav a:hover {
 form {
     display: grid;
     grid-template-columns: auto 1fr;
+    gap: 1em;
+}
+label, button {
+    /*Only argument that works for button here is grid-col
+        so everything else is fine to keep here and does not
+        mess up the button
+    */
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+}
+article {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    gap: 1em;
+    margin: 0;
+}
+article h2 {
+    margin: 0;
+}
+h1 {
+    font-size: 400%;
+
+    & h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+    text-wrap: balance;
+    }
 }
