@@ -15,8 +15,8 @@ body {
     max-width: 80%;
     height: auto;
 }
-ul {display: contents;}
-li {display: contents;}
+nav ul {display: contents;}
+nav li {display: contents;}
 nav {
     display: flex;
     margin-bottom: 1em;
@@ -50,6 +50,9 @@ form {
     grid-template-columns: auto 1fr;
     gap: 1em;
 }
+input, textarea, button {
+    font: inherit;
+}
 label, button {
     /*Only argument that works for button here is grid-col
         so everything else is fine to keep here and does not
@@ -75,16 +78,19 @@ article h2 {
 }
 h1 {
     font-size: 400%;
-
-    & h2, h3, h4, h5, h6 {
+}
+h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
     text-wrap: balance;
-    }
 }
 section {
     border-top: 1px solid oklch(80% 3% 200);
     padding-top: 1em;
     margin-block: 1.5em;
+}
+section article p, 
+section article ul {
+    margin-block: 0.25em;
 }
 section h2 {
     color: var(--color-accent);
