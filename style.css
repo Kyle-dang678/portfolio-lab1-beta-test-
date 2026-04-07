@@ -5,6 +5,7 @@ body {
     font: 100%/1.5 system-ui;
     max-width: 100ch;
     margin-inline: auto;
+    padding: 3ch;
 }
 .profile-photo {
     /* Resize profile photo
@@ -14,3 +15,15 @@ body {
     max-width: 80%;
     height: auto;
 }
+ul {display: contents;}
+li {display: contents;}
+nav {display: flex;}
+nav a {
+    flex: 1;
+    text-align: center;
+}
+nav a.current {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
