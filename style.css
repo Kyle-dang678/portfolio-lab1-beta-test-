@@ -19,7 +19,7 @@ ul {display: contents;}
 li {display: contents;}
 nav {
     display: flex;
-    margin-bottom: auto;
+    margin-bottom: 1em;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: oklch(80% 3% 200);
@@ -33,9 +33,7 @@ nav a {
 }
 nav a.current {
     font-weight: bold;
-    text-decoration: none;
-    border-bottom: 0.4em;
-    border-color: oklch(80% 3% 200);
-    padding-bottom: 0%;
+    border-bottom: 0.4em solid oklch(80% 3% 200);
+    padding-bottom: 0.1em;
 }
 
