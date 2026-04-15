@@ -19,9 +19,13 @@ let pages = [
     {url: '', title: 'Home'},
     {url: 'contact/', title: 'Contact'},
     {url: 'projects/', title: 'Projects'},
-    {url: 'profile/', title: 'Profile'},
+    {url: 'https://github.com/Kyle-dang678', title: 'Profile'},
     {url: 'resume/', title: 'Resume'}
 ]
+
+const BASE_PATH = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+    ? "/"
+    : "/website/";
 
 let nav = document.createElement('nav');
 document.body.prepend(nav);
@@ -29,11 +33,6 @@ document.body.prepend(nav);
 for (let p of pages) {
     let url = p.url;
     let title = p.title;
-    nav.insertAdjacentHTML('beforeend', '<a href="${url}">${title}</a>');
+    url = !url.startsWith('http') ? BASE_PATH + url : url;
+    nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
 }
-
-const BASE_PATH = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
-    ? "/"
-    : "/website/";
-
-url = !url.startsWith('http') ? BASE_PATH + url : url;
