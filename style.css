@@ -22,7 +22,8 @@ nav {
     margin-bottom: 1em;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: oklch(80% 3% 200);
+    --border-color: oklch(50% 10% 200 / 40%);
+    border-bottom-color: var(--border-color);
 }
 a.link:hover {
     text-decoration: underline;
@@ -46,14 +47,14 @@ nav a.current {
 nav a:hover {
     border-bottom: 0.4em solid var(--color-accent);
     padding-bottom: 0.1em;
-    background-color: oklch(from var(--color-accent) 95% 5% h);
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 form {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 1em;
 }
-input, textarea, button {
+input, textarea, button, select {
     font: inherit;
 }
 label, button {
@@ -98,4 +99,13 @@ section article ul {
 section h2 {
     color: var(--color-accent);
     margin-bottom: 0.5em;
+}
+html {
+    color-scheme: light dark;
+}
+.color-scheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 80%;
 }
