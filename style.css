@@ -19,12 +19,12 @@ nav ul {display: contents;}
 nav li {display: contents;}
 nav {
     display: flex;
-    padding-top: 2rem;
     margin-bottom: 1em;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     --border-color: oklch(50% 10% 200 / 40%);
     border-bottom-color: var(--border-color);
+    padding-top: 3rem;
 }
 a.link:hover {
     text-decoration: underline;
