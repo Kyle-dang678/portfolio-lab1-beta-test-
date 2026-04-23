@@ -30,19 +30,19 @@
     "description": "Heatmap visualization of a simulated grade distribution of a previous DSC80 class."
   },
   {
-    "title": "Viewership in Millions by Total Episode Predictive Visualization (Simple Linear Regression)",
+    "title": "Viewership (Millions) by Total Episode Predictive Visualization (Simple Linear Regression)",
     "image": "/portfolio-lab1-beta-test-/images/viewership_by_episode_predictive_model.png",
     "year": "2024",
     "description": "Visualization of model performance through simple linear regression, predicting US views in millions for total episodes of varying shows."
   },
   {
-    "title": "CO2 Damage Trend in % of GNI Over Time",
+    "title": "CO2 Damage Trend (% of GNI) Over Time",
     "image": "/portfolio-lab1-beta-test-/images/proj2_vis_2.png",
     "year": "2026",
     "description": "Collection of line graphs portraying CO2 damage trends by developed, developing, and low-income countries."
   },
   {
-    "title": "Time Spent on Physical Actibity by Major",
+    "title": "Time Spent on Physical Activity by Major",
     "image": "/portfolio-lab1-beta-test-/images/Screenshot 2026-01-18 014919.png",
     "year": "2026",
     "description": "A simple collection of boxplots portraying the amount of time spent on physical acitivty in hours for each major."
