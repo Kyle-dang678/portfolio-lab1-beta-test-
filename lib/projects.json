@@ -1,62 +1,74 @@
 [
   {
-    "title": "Lorem ipsum dolor sit.",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et soluta beatae, doloribus vero natus, consectetur animi blanditiis nihil libero quia, eos enim tempora reiciendis modi pariatur. Odio sed dicta molestias?"
+    "title": "Food Processing Visualization",
+    "image": "images/fpro_distribution.png",
+    "year": "2026",
+    "description": "Visualization of Ultra-Processed Food distribution across various food categories in Walmart, Target, and Whole Foods."
   },
   {
-    "title": "Sunt doloribus incidunt rem?",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Culpa praesentium rem dolore recusandae! Quos at labore necessitatibus quam eum vel quaerat, amet quia autem, a facilis vitae doloribus, officiis atque dolor quisquam! Culpa minima veniam aut unde? Magni."
+    "title": "CO2 Damage by Country Development Phase",
+    "image": "images/project2_vis_1.png",
+    "year": "2026",
+    "description": "A comparative distribution of CO2 Damage in % of GNI for countries that are of developed, developing, or low-income status."
   },
   {
-    "title": "Assumenda debitis obcaecati temporibus.",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "title": "Yearly ChatGPT Search Interest vs GMAT Scores By Year",
+    "image": "images/graph3.png",
+    "year": "2024",
     "description": "Asperiores possimus, praesentium animi exercitationem doloribus natus recusandae in aut perspiciatis non eveniet distinctio omnis quidem, repudiandae esse harum consequuntur quis quisquam? Odio modi architecto, iste dolorem esse error nemo?"
   },
   {
-    "title": "Officia nesciunt praesentium dolor.",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Officiis repellendus nisi facere quas voluptas quo vel tenetur perferendis quod? Ab, excepturi et numquam aperiam corrupti voluptatibus laudantium suscipit earum distinctio illo delectus sunt assumenda fugiat nam ipsa labore."
+    "title": "League of Legends Game Analysis: Gold Difference at 15 Mintues",
+    "image": "images/fig3 - Gold Difference at 15 Minutes by Game Result.png",
+    "year": "2025",
+    "description": "Visualization of decicisive game data in League of Legends, given factor of early gold advantage at the 15 minute mark."
   },
   {
-    "title": "Accusamus praesentium voluptas sunt!",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Ut dolores suscipit rem beatae, temporibus veniam ipsa alias modi, possimus quae nihil harum aspernatur, eum recusandae quo porro nobis vel fugit dignissimos magnam corporis expedita? Expedita excepturi ipsa ab."
+    "title": "Distribution of Letter Grades for DSC80 (Simulated)",
+    "image": "images/Screenshot 2026-01-23 144508.png",
+    "year": "2025",
+    "description": "Heatmap visualization of a simulated grade distribution of a previous DSC80 class."
   },
   {
-    "title": "Temporibus distinctio deserunt accusantium!",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Labore possimus aliquid odio adipisci provident expedita incidunt et, aspernatur, tenetur explicabo doloremque perferendis nobis quasi nihil iste veritatis facilis facere eaque laudantium! Nesciunt aperiam sunt itaque praesentium? Et, eos."
+    "title": "Viewership in Millions by Total Episode Predictive Visualization (Simple Linear Regression)",
+    "image": "images/viewership_by_episode_predictive_model.png",
+    "year": "2024",
+    "description": "Visualization of model performance through simple linear regression, predicting US views in millions for total episodes of varying shows."
   },
   {
-    "title": "Magni quisquam assumenda neque!",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Similique nemo quia eum saepe, ex odit consequatur accusamus doloribus, ab culpa quas commodi, perspiciatis animi! Voluptate rem suscipit et nostrum, voluptas fugit blanditiis minus iusto, dolores quidem repellendus corrupti."
+    "title": "CO2 Damage Trend in % of GNI Over Time",
+    "image": "images/proj2_vis_2.png",
+    "year": "2026",
+    "description": "Collection of line graphs portraying CO2 damage trends by developed, developing, and low-income countries."
   },
   {
-    "title": "Quae voluptas consectetur nobis.",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Doloribus, aut aliquid amet sit beatae, placeat quos labore, voluptate quasi culpa earum at odit laboriosam vero illo optio! Modi, natus at voluptatum asperiores iusto exercitationem sapiente officia fugiat cupiditate!"
+    "title": "Time Spent on Physical Actibity by Major",
+    "image": "images/Screenshot 2026-01-18 014919.png",
+    "year": "2026",
+    "description": "A simple collection of boxplots portraying the amount of time spent on physical acitivty in hours for each major."
   },
   {
-    "title": "Blanditiis quam nemo consequatur?",
+    "title": "Scavenger Hunt App",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Exercitationem dolor sed itaque cumque esse? Voluptatem tempore, beatae, quis quod ullam corporis harum in illum neque quia voluptates velit vitae esse magnam sequi pariatur eos modi nulla eum rerum?"
+    "year": "2023",
+    "description": "Mobile app dedicated to gamify and enhance the experience of exploring Las Vegas through an interactive scavenger hunt game."
   },
   {
-    "title": "Doloremque, vero beatae. Sed!",
+    "title": "Image Processing Challenge",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Minima obcaecati adipisci nam ratione quam! Minima architecto, consequatur similique eveniet quis vitae beatae voluptatibus nostrum veniam nisi tempore facilis debitis. Provident nostrum delectus libero maiores, consectetur quod vitae aspernatur?"
+    "year": "2024",
+    "description": "Deployed numerous image processing/editing methods to uncover a hidden message for a long series of Data Science challenges."
   },
   {
     "title": "Consequatur praesentium obcaecati omnis!",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Dolores autem consectetur a natus est illo quidem, reprehenderit magni, quaerat minima ut eveniet sint. Debitis autem, nam quisquam minus sunt culpa atque, blanditiis esse provident veniam quasi architecto maiores?"
+    "year":"2024",
+    "description": "Placeholder data"
   },
   {
     "title": "A pariatur magni laudantium.",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Deleniti ipsum dolor excepturi voluptatum labore optio, odio cupiditate earum dicta alias porro, beatae laudantium consectetur suscipit nulla molestias similique vitae voluptatibus doloremque itaque, delectus fugit rem aut repellendus? Inventore."
+    "year":"2026",
+    "description": "Placeholder data"
   }
 ]
