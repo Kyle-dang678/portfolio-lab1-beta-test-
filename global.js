@@ -92,7 +92,6 @@ export async function fetchJSON(url) {
   try {
     // Fetch the JSON file from the given URL
     const response = await fetch(url);
-    console.log(response);
     if (!response.ok) {
         throw new Error(`Failed to fetch projects: ${response.statusText}`);
     }
@@ -103,7 +102,7 @@ export async function fetchJSON(url) {
   }
 }
 
-export function renderProjects(projects, containerElement) {
+export function renderProjects(projects, containerElement, headingLevel='h2') {
     containerElement.innerHTML = '';
     for (let project of projects) {
         const article = document.createElement('article');
@@ -113,6 +112,5 @@ export function renderProjects(projects, containerElement) {
             <p>${project.description}</p>
         `;
         containerElement.appendChild(article);
-
     }
 }
