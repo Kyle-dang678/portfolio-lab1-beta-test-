@@ -130,3 +130,6 @@ section h2 {
     font-family: Baskerville;
     font-variant-numeric: oldstyle-nums;
 }
+.project-year {
+    margin-top: 1rem;
+}
