@@ -75,7 +75,7 @@ label, button {
 .projects article {
     display: grid;
     grid-template-rows: subgrid;
-    grid-row: span 3;
+    grid-row: span 4;
     gap: 1em;
     margin: 0;
 }
@@ -129,7 +129,4 @@ section h2 {
 .projects year {
     font-family: Baskerville;
     font-variant-numeric: oldstyle-nums;
-}
-.project-year {
-    margin-top: 1rem;
 }
