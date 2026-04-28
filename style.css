@@ -126,3 +126,7 @@ section h2 {
     object-fit: contain;
     background-color: white;
 }
+.projects year {
+    font-family: Baskerville;
+    font-variant-numeric: oldstyle-nums;
+}
