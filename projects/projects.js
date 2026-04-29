@@ -14,8 +14,8 @@ let data = [1, 2, 3, 4, 5, 5];
 let sliceGenerator = d3.pie()
 let arcData = sliceGenerator(data);
 let arcs = arcData.map((d) => arcGenerator(d));
-arcs.forEach((arc) => {
-    d3.select('svg')
+arcs.forEach((arc, idx) => {
+    d3.select('#projects-pie-plot')
         .append('path')
         .attr('d', arc)
         .attr('fill', colors(idx));
