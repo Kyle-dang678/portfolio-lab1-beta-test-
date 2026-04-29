@@ -5,3 +5,9 @@ const projectsContainer = document.querySelector('.projects');
 const projectsTitle = document.querySelector('.projects-title');
 projectsTitle.textContent = `Projects (${projects.length})`;
 renderProjects(projects, projectsContainer, 'h2');
+
+let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
+let arc = arcGenerator({
+    startAngle: 0,
+    endAngle: 2 * Math.PI,
+});
