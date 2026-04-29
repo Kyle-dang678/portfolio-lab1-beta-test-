@@ -135,3 +135,10 @@ section h2 {
     margin-block: 2em;
     overflow: visible;
 }
+.projects article > div {
+    display: flex;
+    flex-direction: column;
+}
+.projects article > div p:first-of-type {
+    flex: 1;
+}
