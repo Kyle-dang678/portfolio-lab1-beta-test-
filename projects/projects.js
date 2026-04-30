@@ -11,6 +11,7 @@ let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
 let query = '';
 let selectedIndex = -1;
+let data = [];
 
 function renderPieChart(projectsGiven) {
     let rolledData = d3.rollups(
@@ -18,7 +19,7 @@ function renderPieChart(projectsGiven) {
         (v) => v.length,
         (d) => d.year,
     );
-    let data = rolledData.map(([year, count]) => {
+    data = rolledData.map(([year, count]) => {
         return { value: count, label: year};
     });
 
@@ -41,17 +42,9 @@ function renderPieChart(projectsGiven) {
                 d3.select('.legend')
                     .selectAll('li')
                     .attr('class', (_, i) => i === selectedIndex ? 'legend-item selected' : 'legend-item');
-                
-                if (selectedIndex === -1) {
-                    renderProjects(projects, projectsContainer, 'h2');
-                } else {
-                    let selectedYear = data[selectedIndex].label;
-                    let filteredProjects = projects.filter((p) => p.year === selectedYear);
-                    renderProjects(filteredProjects, projectsContainer, 'h2');
-                }
-            });
+                renderProjects(getFilteredProjects(), projectsContainer, 'h2');
+        });
     });
-
     let legend = d3.select('.legend');
     data.forEach((d, idx) => {
         legend
@@ -68,10 +61,7 @@ renderProjects(projects, projectsContainer, 'h2');
 let searchInput = document.querySelector('.searchBar');
 searchInput.addEventListener('input', (event) => {
     query = event.target.value;
-    let filteredProjects = projects.filter((project) => {
-        let values = Object.values(project).join('\n').toLocaleLowerCase();
-        return values.includes(query.toLocaleLowerCase());
-    });
+    let filteredProjects = getFilteredProjects();
     renderProjects(filteredProjects, projectsContainer, 'h2');
     renderPieChart(filteredProjects);
 });
@@ -79,8 +69,8 @@ searchInput.addEventListener('input', (event) => {
 function getFilteredProjects() {
     return projects.filter((project) => {
         let values = Object.values(project).join('\n').toLowerCase();
-        let matchesQuery = value.includes(query.toLowerCase());
-        let matchesYear = selectedIndex === 1 || project.year === data[selectedIndex]?.label;
+        let matchesQuery = values.includes(query.toLowerCase());
+        let matchesYear = selectedIndex === -1 || project.year === data[selectedIndex]?.label;
         return matchesQuery && matchesYear;
     })
 }
