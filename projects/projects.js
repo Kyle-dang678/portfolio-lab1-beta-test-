@@ -75,3 +75,12 @@ searchInput.addEventListener('input', (event) => {
     renderProjects(filteredProjects, projectsContainer, 'h2');
     renderPieChart(filteredProjects);
 });
+
+function getFilteredProjects() {
+    return projects.filter((project) => {
+        let values = Object.values(project).join('\n').toLowerCase();
+        let matchesQuery = value.includes(query.toLowerCase());
+        let matchesYear = selectedIndex === 1 || project.year === data[selectedIndex]?.label;
+        return matchesQuery && matchesYear;
+    })
+}
