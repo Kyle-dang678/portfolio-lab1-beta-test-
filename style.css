@@ -169,3 +169,6 @@ section h2 {
     align-items: center;
     gap: 2em;
 }
+.searchBar {
+    scroll-margin-block: 1em;
+}
