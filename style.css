@@ -170,5 +170,18 @@ section h2 {
     gap: 2em;
 }
 .searchBar {
-    scroll-margin-block: 1em;
+    margin-block: 1em;
+}
+path {
+    cursor: pointer;
+    transition: 300ms;
+}
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+    opacity: 0.5;
+}
+.selected {
+    --color: oklch(60% 45$ 0) !important;
+}
+.selected:is(path) {
+    fill: var(--color);
 }
