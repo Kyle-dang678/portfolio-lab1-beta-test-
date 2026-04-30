@@ -142,3 +142,30 @@ section h2 {
 .projects article > div p:first-of-type {
     flex: 1;
 }
+.swatch {
+    display: inline-block;
+    width: 1em;
+    aspect-ratio: 1/1;
+    background-color: var(--color);
+    border-radius: 50%;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    gap: 1em;
+    padding: 1em;
+    border: 1px solid oklch(80% 3% 200);
+    margin: 1em;
+    list-style: none;
+    flex: 1;
+}
+.container {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}

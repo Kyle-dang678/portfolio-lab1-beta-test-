@@ -10,8 +10,15 @@ renderProjects(projects, projectsContainer, 'h2');
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
-let data = [1, 2, 3, 4, 5, 5];
-let sliceGenerator = d3.pie()
+let data = [
+    { value: 1, label:'apples'},
+    { value: 2, label:'oranges'},
+    { value: 3, label:'mangos'},
+    { value: 4, label:'pears'},
+    { value: 5, label:'limes'},
+    { value: 6, label:'cherries'},
+];
+let sliceGenerator = d3.pie().value((d) => d.value);
 let arcData = sliceGenerator(data);
 let arcs = arcData.map((d) => arcGenerator(d));
 arcs.forEach((arc, idx) => {
@@ -20,3 +27,12 @@ arcs.forEach((arc, idx) => {
         .attr('d', arc)
         .attr('fill', colors(idx));
 });
+
+let legend = d3.select('.legend');
+data.forEach((d, idx) => {
+    legend
+        .append('li')
+        .attr('style', `--color:${colors(idx)}`)
+        .attr('class', 'legend-item')
+        .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
+})
