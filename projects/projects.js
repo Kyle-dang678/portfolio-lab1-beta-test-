@@ -37,3 +37,14 @@ data.forEach((d, idx) => {
         .attr('class', 'legend-item')
         .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
 });
+
+let query = '';
+let searchInput = document.querySelector('.searchBar');
+searchInput.addEventListener('change', (event) => {
+    query = event.target.value;
+    let filteredProjects = projects.filter((project) => {
+        let values = Object.values(project).join('\n').toLocaleLowerCase();
+        return values.includes(query.toLocaleLowerCase());
+    })
+    renderProjects(filteredProjects, projectsContainer, 'h2');
+});
