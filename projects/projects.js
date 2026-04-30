@@ -63,7 +63,9 @@ searchInput.addEventListener('input', (event) => {
     query = event.target.value;
     let filteredProjects = getFilteredProjects();
     renderProjects(filteredProjects, projectsContainer, 'h2');
-    renderPieChart(filteredProjects);
+    if (selectedIndex === -1) {
+        renderPieChart(getFilteredProjects());
+    }
 });
 
 function getFilteredProjects() {
