@@ -118,6 +118,7 @@ export function renderProjects(
             <div>
                 <p>${project.description}</p>
                 <p>${project.year}</p>
+                ${project.url ? `<a href="${project.url}" target="_blank">View Project</a>` : ""}
             </div>
         `;
     containerElement.appendChild(article);

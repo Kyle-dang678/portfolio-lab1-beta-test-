@@ -14,7 +14,7 @@
   },
   {
     "title": "Bikewatching Interactive Map",
-    "image": "/Portfolio-/images/bikewatchproj.png",
+    "image": "/Portfolio/images/bikewatchproj.png",
     "year":"2026",
     "url": "https://kyle-dang678.github.io/bikewatching/",
     "description": "An interactive map visualizing Bluebikes station traffic and bike lanes across Boston and Cambridge, with real-time filtering by time of day and color-coded indicators for arrival and departure patterns."
