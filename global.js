@@ -117,8 +117,10 @@ export function renderProjects(
             <img src ="${project.image}" alt = "${project.title}">
             <div>
                 <p>${project.description}</p>
-                <p>${project.year}</p>
-                ${project.url ? `<a href="${project.url}" target="_blank">View Project</a>` : ""}
+                <div class="project-footer">
+                    <p>${project.year}</p>
+                    ${project.url ? `<a href="${project.url}" target="_blank">View Project</a>` : ""}
+                </div>
             </div>
         `;
     containerElement.appendChild(article);
