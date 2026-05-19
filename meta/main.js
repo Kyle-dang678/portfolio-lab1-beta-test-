@@ -14,16 +14,6 @@ async function loadData() {
   return data;
 }
 
-let commitProgress = 100;
-let timeScale = d3
-  .scaleTime()
-  .domain([
-    d3.min(commits, (d) => d.datetime),
-    d3.max(commits, (d) => d.datetime),
-  ])
-  .range([0, 100]);
-let commitMaxTime = timeScale.invert(commitProgress);
-
 function onTimeSliderChange() {
   commitProgress = document.getElementById("commit-progress").value;
   commitMaxTime = timeScale.invert(commitProgress);
@@ -33,12 +23,6 @@ function onTimeSliderChange() {
       timeStyle: "short",
     });
 }
-
-document
-  .getElementById("commit-progress")
-  .addEventListener("input", onTimeSliderChange);
-
-onTimeSliderChange();
 
 function processCommits(data) {
   return d3
@@ -250,5 +234,20 @@ function renderScatterPlot(data, commits) {
 
 let data = await loadData();
 let commits = processCommits(data);
+let commitProgress = 100;
+let timeScale = d3
+  .scaleTime()
+  .domain([
+    d3.min(commits, (d) => d.datetime),
+    d3.max(commits, (d) => d.datetime),
+  ])
+  .range([0, 100]);
+let commitMaxTime = timeScale.invert(commitProgress);
+
+document
+  .getElementById("commit-progress")
+  .addEventListener("input", onTimeSliderChange);
+
+onTimeSliderChange();
 renderCommitInfo(data, commits);
 renderScatterPlot(data, commits);
