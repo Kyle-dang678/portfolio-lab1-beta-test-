@@ -295,6 +295,6 @@ document
   .getElementById("commit-progress")
   .addEventListener("input", onTimeSliderChange);
 
-onTimeSliderChange();
 renderCommitInfo(data, commits);
 renderScatterPlot(data, commits);
+onTimeSliderChange();
