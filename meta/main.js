@@ -24,6 +24,7 @@ function onTimeSliderChange() {
     });
   filterCommits = commits.filter((d) => d.datetime <= commitMaxTime);
   updateScatterPlot(data, filterCommits);
+  updateFileDisplay(filterCommits);
 }
 
 function processCommits(data) {
@@ -215,7 +216,7 @@ function renderScatterPlot(data, commits) {
   const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
   dots
     .selectAll("circle")
-    .data(sortedCommits)
+    .data(sortedCommits, (d) => d.id)
     .join("circle")
     .attr("cx", (d) => xScale(d.datetime))
     .attr("cy", (d) => yScale(d.hourFrac))
@@ -278,6 +279,28 @@ function updateScatterPlot(data, commits) {
     });
 }
 
+function updateFileDisplay(filteredCommits) {
+  let lines = filteredCommits.flatMap((d) => d.lines);
+  let files = d3
+    .groups(lines, (d) => d.file)
+    .map(([name, lines]) => ({ name, lines }))
+    .sort((a, b) => b.lines.length - a.lines.length);
+
+  let filesContainer = d3
+    .select("#files")
+    .selectAll("div")
+    .data(files, (d) => d.name)
+    .join((enter) =>
+      enter.append("div").call((div) => {
+        div.append("dt").append("code");
+        div.append("dd");
+      }),
+    );
+
+  filesContainer.select("dt > code").text((d) => d.name);
+  filesContainer.select("dd").text((d) => `${d.lines.length} lines`);
+}
+
 let data = await loadData();
 let commits = processCommits(data);
 let commitProgress = 100;
@@ -298,3 +321,4 @@ document
 renderCommitInfo(data, commits);
 renderScatterPlot(data, commits);
 onTimeSliderChange();
+updateFileDisplay(commits);
