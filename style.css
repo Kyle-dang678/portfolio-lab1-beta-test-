@@ -307,3 +307,8 @@ dd {
 #files dd {
     grid-column: 2;
 }
+.step {
+    padding-bottom: 60vh;
+    padding-top: 1em;
+    border-top: 1px solid oklch(80% 3% 200);
+}
